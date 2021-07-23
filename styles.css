@@ -1,0 +1,10 @@
+
+#listStickers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    list-style: none;
+}
+body {
+    cursor: pointer;
+}
