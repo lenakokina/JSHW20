@@ -31,12 +31,12 @@ function onEditStickerFocusout(event) {
 
 function onDeleteStickerClick(event) {
     const stickerId = getStickerId(event.target);
-    if (event.target.classList.contains('delBtn')) {
-        deleteSticker(stickerId);
-    }
-    // if ($(event.target).hasClass('delBtn')) {
+    // if (event.target.classList.contains('delBtn')) {
     //     deleteSticker(stickerId);
     // }
+    if ($(event.target).hasClass('delBtn')) {
+        deleteSticker(stickerId);
+    }
    }
 
 function getStickerId(el) {
@@ -106,7 +106,7 @@ function deleteSticker(id) {
 
 
 function saveSticker(id) {
-    const elem = $(`[data-sticker-id=${id}] .newTextareaSticker`);
+    const elem = $(`[data-sticker-id=${id}] .newStickerTextarea`);
     const data = $(elem).val();
 
     fetch(STICKER_URL + id, {
